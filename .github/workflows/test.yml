@@ -1,0 +1,17 @@
+name: Test Calistirmasi
+on:
+  workflow_dispatch: # Bu satır "Bana çalıştır butonu ver" demek kanka
+
+jobs:
+  deneme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Kutuphaneyi Yukle
+        run: pip install requests
+      - name: Kodu Calistir
+        run: python main.py
