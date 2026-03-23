@@ -1,6 +1,9 @@
-name: Test Calistirmasi
+name: Gunluk Altin Takip Botu
 on:
-  workflow_dispatch: # Bu satır "Bana çalıştır butonu ver" demek kanka
+  schedule:
+    # Bu satır Türkiye saatiyle her sabah 05:00'te çalıştırır (02:00 UTC)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Bu satır sayesinde "Run workflow" butonu da kaybolmaz
 
 jobs:
   deneme:
